@@ -1,0 +1,15 @@
+# For the python virtual environment
+python -m venv venv
+source venv/bin/activate
+
+# For the Django
+pip install django
+django-admin startproject core
+mv core backend   # rename the outer directory to backend
+cd frontend
+django-admin startapp blog
+django-admin startapp blog_api
+
+# For the React at the root directory
+npx create-react-app frontend .
+cd frontend
